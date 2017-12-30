@@ -1,0 +1,394 @@
+Main page <http://lionwiki.0o.cz/index.php?page=Main+page>   Recent
+changes <http://lionwiki.0o.cz/index.php?action=recent>
+
+
+  Syntax reference
+  <http://lionwiki.0o.cz/index.php?action=whatlinkshere&page=Syntax+reference>
+  (Čeština <http://lionwiki.0o.cz/index.php?page=Syntax+reference.cs>,
+  Deutsch <http://lionwiki.0o.cz/index.php?page=Syntax+reference.de>,
+  English <http://lionwiki.0o.cz/index.php?page=Syntax+reference.en>,
+  Français <http://lionwiki.0o.cz/index.php?page=Syntax+reference.fr>,
+  Italiano <http://lionwiki.0o.cz/index.php?page=Syntax+reference.it>,
+  Português brasileiro
+  <http://lionwiki.0o.cz/index.php?page=Syntax+reference.pt-br>)
+
+*Navigation <http://lionwiki.0o.cz/index.php?page=>*
+
+  * Home <http://lionwiki.0o.cz/index.php?page=Main+page>
+  * Installation
+    <http://lionwiki.0o.cz/index.php?page=UserGuide%3A+Installation>
+  * Appearance <http://lionwiki.0o.cz/index.php?page=Appearance>
+  * Plugins <http://lionwiki.0o.cz/index.php?page=UserGuide%3A+Plugins>
+  * UserGuide <http://lionwiki.0o.cz/index.php?page=UserGuide>
+  * Syntax reference
+    <http://lionwiki.0o.cz/index.php?page=Syntax+reference>
+  * Forum <http://lionwiki.0o.cz/newforum/index.php/board,1.0.html>
+  * Old archived forum <http://lionwiki.0o.cz/forum/>
+  * About LionWiki <http://lionwiki.0o.cz/index.php?page=About+LionWiki>
+
+/This is a Wiki <http://en.wikipedia.org/wiki/Wiki>, so feel free to
+correct any factual or grammatical error./
+
+This document explains all syntax features of core LionWiki. Syntax of
+tables (provided by plugin) is on separate page: Tables plugin
+<http://lionwiki.0o.cz/index.php?page=UserGuide%3A+Tables+plugin>.
+
+
+    Headings(Edit
+    <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=1>)
+
+Example:
+
+!Heading H2
+!!Heading H3
+!!!Heading H4
+
+
+    Heading H2(Edit
+    <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=2>)
+
+
+      Heading H3(Edit
+      <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=3>)
+
+
+        Heading H4(Edit
+        <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=4>)
+
+More exclamation marks you use, the smaller the heading will be (up to 5
+exclamation marks). Exclamation marks has to be exactly at the beginning
+of the line.
+
+
+    Lists(Edit
+    <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=5>)
+
+
+      Unordered list(Edit
+      <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=6>)
+
+* Fruit
+** Apple
+*** Granny smith
+** Orange
+* Vegetables
+** Garlic
+** Onion
+
+  * Fruit
+      o Apple
+          + Granny smith
+      o Orange
+  * Vegetables
+      o Garlic
+      o Onion
+
+
+      Ordered list(Edit
+      <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=7>)
+
+# First item 
+## First subitem 
+### First subsubitem
+## Second subitem
+
+ 1. First item
+     1. First subitem
+         1. First subsubitem
+     2. Second subitem 
+
+
+    Text styles(Edit
+    <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=8>)
+
+'''Bold''' → *Bold* (three apostrophes)
+
+''Italic'' → /Italic/ (two apostrophes)
+
+'''''Bold and italic''''' → */Bold and italic/* (five apostrophes)
+
+'—Strikethrough—' → Strikethrough
+
+'__Underlined__' → _Underlined_
+
+{small}Small text{/small} → Small text
+
+x{sup}10{/sup} → x^10
+
+x{sub}i{/sub} → x_i
+
+
+      CSS styles, classes, IDs(Edit
+      <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=9>)
+
+{.first.second#id color: blue; font-size: large}Styled text span with ID and two classes{/} 
+
+Styled text span with ID and two classes
+
+Classes begins with dot, ID with hash sign. Everything after first space
+is considered to be CSS style, so there can't be any space between or
+inside classes and ID. Few other possibilities:
+
+{. display: block;}Text{/} - neither class, nor id, just style
+{.citation}Text{/if} - just class
+
+The enclosing element is <span>.
+
+
+    Emails, links, images(Edit
+    <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=10>)
+
+Links to other pages can be created like this:
+
+[Main page] → Main page <http://lionwiki.0o.cz/index.php?page=Main+page>
+
+or
+
+[Main project page|Main page] → Main project page
+<http://lionwiki.0o.cz/index.php?page=Main+page>
+
+or
+
+[Features header on Main page|Main page#Features] → Features header on
+Main page <http://lionwiki.0o.cz/index.php?page=Main+page#Features>
+
+
+Emails and web links are automatically recognized:
+
+http://lionwiki.0o.cz → http://lionwiki.0o.cz <http://lionwiki.0o.cz/>
+
+lionwiki@example.com → lionwiki@example.com <mailto:lionwiki@example.com>
+
+
+You can use also relative links, but they have to start with ./
+(otherwise it will be interpreted as Wiki page). So if you want to link
+some HTML page in the same directory, you use:
+
+[Interesting page|./SomeWebPage.html] → Interesting page
+<http://lionwiki.0o.cz/SomeWebPage.html>
+
+Or to use a relative path to a file on the same server but in a higher
+directory, you can use:
+
+[Interesting File In Parent Directory|./../SomeWebPage.html] →
+Interesting File In Parent Directory
+<http://lionwiki.0o.cz/SomeWebPage.html>
+
+
+      Images(Edit
+      <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=11>)
+
+Image handling was changed a lot in the 3.2 release, see older version
+<http://lionwiki.0o.cz/index.php?page=Syntax+reference.en&action=rev&f1=20100108-2008-04.bak#Images>
+of this page if you use older version.
+
+[http://lionwiki.0o.cz/lion.jpg] →
+
+You can use your image as your link:
+[http://lionwiki.0o.cz/lion.jpg|link=http://lionwiki.0o.cz/] →
+
+<http://lionwiki.0o.cz/>
+
+You can also place your image to the left or right, possibly combined
+with other features:
+
+[http://lionwiki.0o.cz/lion.jpg|link=http://lionwiki.0o.cz/|center|title=Big
+Lion|alt=Alt text]
+
+Alt text <http://lionwiki.0o.cz/>
+
+Alt text <http://lionwiki.0o.cz/>
+
+
+More complex operations with images can be done with ImageExt plugin
+<http://lionwiki.0o.cz/index.php?page=UserGuide%3A+ImageExt+plugin>.
+
+
+    Subpages(Edit
+    <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=12>)
+
+Subpages are useful when you need to insert some common content into
+multiple pages, example could be a navigational menu (by the way, we
+have Menu plugin
+<http://lionwiki.0o.cz/index.php?page=UserGuide%3A+Menu+plugin>.
+
+Syntax: {include:page_to_be_included}.
+
+You can use the same syntax to include page in template (i.e. not in
+page content), but in this case, whole content of this subpage must be
+in HTML (you can, but not have to enclose it in {html} and {/html}).
+
+
+    Multilingual content(Edit
+    <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=13>)
+
+Let's say you have page named "Biography" in German and you would like
+to make French variant. Rename page Biography to Biography.de and create
+page named Biography.fr and insert French translation there. Then
+visitors whose browser identifies primary language as French will see
+Biography.fr. It's recommended to create a redirect from page Biography
+to default language variant. The obvious limitation is that page name
+has to stay the same in every language variant. That's not such a big
+problem with "Biography", but it can be worse with other names.
+
+This is recommended way to create multilingual content, there are more
+ways to do it.
+
+
+    Redirects(Edit
+    <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=14>)
+
+If you want to redirect from some page to other, put {redirect:page} at
+the very beginning of the page. It's not straightforward to edit page
+containing redirect because every visit will cause redirecting. The only
+way to edit such page is from search results (as it provides direct edit
+links), or possibly by manually altering URL.
+
+
+    Other(Edit
+    <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=15>)
+
+  * Headings
+    <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Headings>
+  * Heading H2
+    <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Heading_H2>
+      o Heading H3
+        <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Heading_H3>
+          + Heading H4
+            <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Heading_H4>
+  * Lists <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Lists>
+      o Unordered list
+        <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Unordered_list>
+      o Ordered list
+        <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Ordered_list>
+  * Text styles
+    <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Text_styles>
+      o CSS styles, classes, IDs
+        <http://lionwiki.0o.cz/index.php?page=Syntax+reference#CSS_styles__classes__IDs>
+  * Emails, links, images
+    <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Emails__links__images>
+      o Images
+        <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Images>
+  * Subpages
+    <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Subpages>
+  * Multilingual content
+    <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Multilingual_content>
+  * Redirects
+    <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Redirects>
+  * Other <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Other>
+      o Table of contents
+        <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Table_of_contents>
+      o Characters
+        <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Characters>
+      o Code <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Code>
+      o Horizontal line
+        <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Horizontal_line>
+      o Suppressing wiki syntax
+        <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Suppressing_wiki_syntax>
+      o HTML code
+        <http://lionwiki.0o.cz/index.php?page=Syntax+reference#HTML_code>
+          + HTML entities
+            <http://lionwiki.0o.cz/index.php?page=Syntax+reference#HTML_entities>
+      o Newline
+        <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Newline>
+      o Internal comments
+        <http://lionwiki.0o.cz/index.php?page=Syntax+reference#Internal_comments>
+
+
+      Table of contents(Edit
+      <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=16>)
+
+Automatically generated table of contents can be inserted with {TOC}
+(see demo on the right). It can be used in both pages and templates.
+
+
+      Characters(Edit
+      <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=17>)
+
+Some sequences of characters are automatically replaced:
+
+  * Arrows : <-- : ←, --> : →, <--> : ↔
+  * Dash : -- : —
+  * Copyrights : (c) or (C) : ©, (r) or (R) : ®
+
+
+      Code(Edit
+      <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=18>)
+
+Code syntax is useful when you need to keep original spacing and layout
+of text, especially for programming source code.
+
+{{import sys
+
+if len(sys.argv) == 2:
+
+print "Hello",sys.argv[1]}}
+
+does:
+
+import sys
+if len(sys.argv) == 2:
+   print "Hello",sys.argv[1]
+
+We also have a plugin for syntax highlighting
+<http://lionwiki.0o.cz/index.php?page=UserGuide%3A+SyntaxHighlighter+plugin>.
+
+
+      Horizontal line(Edit
+      <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=19>)
+
+------------------------------------------------------------------------
+
+by *----*
+
+
+      Suppressing wiki syntax(Edit
+      <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=20>)
+
+By using ^ character before syntax keyword or using {{something}}. If
+you still don't know how, take a look on wiki code of this page, there
+are plenty of examples. If you want to insert ^ character, you have to
+double it, i.e. ^^
+
+
+      HTML code(Edit
+      <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=21>)
+
+Do you want to insert youtube video to your site? Or any other HTML
+code? Just insert it between {html}some html code{/html}. This does not
+have to work if config value $NO_HTML is set to true. Note that it is
+serious security risk if you allow users to post HTML code in your wiki.
+
+
+        HTML entities(Edit
+        <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=22>)
+
+HTML entities are automatically recognized and left without modification.
+
+
+      Newline(Edit
+      <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=23>)
+
+LionWiki joins adjacent newlines together, if you need more than one
+newline, use {br}.
+
+
+      Internal comments(Edit
+      <http://lionwiki.0o.cz/index.php?action=edit&page=Syntax+reference&par=24>)
+
+You can insert internal comments not intended to be displayed using
+HTML-like syntax <!-- text not intended to be displayed -->
+
+Tags: syntax <http://lionwiki.0o.cz/index.php?action=tagsearch&tag=syntax>
+	
+
+Powered by LionWiki <http://lionwiki.0o.cz/>
+Edit <http://lionwiki.0o.cz/index.php?page=Syntax+reference&action=edit>
+  History
+<http://lionwiki.0o.cz/index.php?page=Syntax+reference&action=history>
+
+<#>
+
+<#>
+
+<#>
